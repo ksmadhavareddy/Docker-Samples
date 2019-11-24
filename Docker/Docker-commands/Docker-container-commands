@@ -1,0 +1,54 @@
+
+Simple docker commands for managing containers and images:
+=========================================================
+
+docker ps  -- all containers details.
+docker ps -a   -- all conatiners details inclduing exited containers
+docker rm containerid -- to remove container.
+
+docker images -- list of available images
+
+docker rmi imagename  -- to remove image 
+
+docker pull imagename -- only pull image from docker registry
+
+docker run imagename -- pulls and runs containername  [ if no prcess inside conatiner , it will be exited)
+
+docker run ubuntu sleep 5 -- sleep for 5 seconds and exist the conatiner (in case if no prcess is running in conatiner)
+
+docker exec imageinstancename cat /etc/hosts --> to know the contents for conatiner.
+
+docker run imagename -- will run in attached mode (basically will run on the forgrounde and standard conole our ouput). (CTRL + C for exiting)
+
+docker run -d imagename -- run conatiner in detached mode (runs in the background)
+
+docker attch idofcontainer (agin attach the conatiner back)
+
+docker stop containername
+
+docker rm containername
+
+
+
+docker version = show docker version (need to look for docker server engine version)
+
+Delete all containers from the Docker Host:
+	
+To stop containers run the command 
+	docker stop <container id | container name>
+And then to delete them 
+	run docker rm <container id | container name>
+	
+
+docker rmi imagename
+
+Run a container with the nginx:1.14-alpine image and name it webapp
+docker run --name webapp nginx:1.14-alpine
+
+Cleanup: Delete all images on the host
+
+
+
+Docker images commands:
+
+docker images 
